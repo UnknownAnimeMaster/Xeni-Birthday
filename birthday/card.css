@@ -139,3 +139,18 @@ body {
   font-size: 120px;
   line-height: 120px;
 }
+
+#button_back {
+  font-size: 22px;
+  position: fixed;
+  margin: 0 auto;
+  bottom: 50%;
+  left: 0;
+  right: 0;
+  width: 12em;
+  background-color: #ffffff;
+  color: black;
+  cursor: pointer;
+  outline: none;
+  border: none;
+}
