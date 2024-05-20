@@ -19,6 +19,24 @@ body {
     text-shadow: 0 0 20px black;
     opacity: 0.8;
   }
+
+  #button_go {
+    font-size: 22px;
+    position: fixed;
+    margin: 0 auto;
+    bottom: 20%;
+    left: 0;
+    right: 0;
+    width: 12em;
+    background-color: rgb(30, 25, 52);
+    color: whitesmoke;
+    cursor: pointer;
+    outline: none;
+    border: none;
+  
+    /* Add a radiant border */
+    box-shadow: 0px 0px 12px rgba(44, 38, 59, 0.2);
+  }
   
   #glow {
     position: absolute;

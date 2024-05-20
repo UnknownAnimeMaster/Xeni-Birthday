@@ -4,6 +4,9 @@ $(document).ready(function() {
         var txt = $("h1");
         var audio = document.getElementById("birthday-audio");
 
+        // Make it hidden on first time
+        hideButton();
+
         // Debug: Check if audio is loaded
         audio.onloadeddata = function() {
             console.log("Audio file is loaded and ready to play.");
@@ -34,6 +37,10 @@ $(document).ready(function() {
                     $(this).addClass("puff-bubble");
                 });
                 $("#glow").remove();
+
+                // Show the button after 5 seconds
+                showButton();
+                
                 txt.hide().html("I wish you a happy birthday").delay(750).fadeIn(300);
                 $("#candle").animate(
                     {
@@ -45,3 +52,24 @@ $(document).ready(function() {
         });
     });
 });
+
+// Show the button with opacity 0 to 100%
+function showButton() {
+    setTimeout(function() {
+      var button = document.getElementById("button_go");
+      button.style.display = "block";
+      button.style.opacity = 0;
+      var interval = setInterval(function() {
+        button.style.opacity = parseFloat(button.style.opacity) + 0.1;
+        if (button.style.opacity >= 1) {
+          clearInterval(interval);
+        }
+      }, 100);
+    }, 5000);
+  }
+
+// Hide the button
+function hideButton() {
+    var button = document.getElementById("button_go");
+    button.style.display = "none";
+}
