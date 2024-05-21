@@ -4,35 +4,42 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
+
 body {
   background-color: #fdbf00;
+  height: 100vh; /* Set the body height to the full viewport height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
 .card {
-  width: 640px;
-  height: 400px;
-  position: absolute;
+  max-width: 90vw; /* Set the maximum width to 90% of the viewport width */
+  max-height: 90vh; /* Set the maximum height to 90% of the viewport height */
+  position: relative;
   margin: auto;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  -webkit-perspective: 1200px;
   perspective: 1200px;
   transition: 1s;
 }
+
 .card:hover {
   transform: rotate(-5deg);
 }
+
 .card:hover .outside {
   transform: rotateY(-130deg);
 }
+
 .outside,
 .inside {
   height: 100%;
   width: 50%;
   position: absolute;
   left: 50.1%;
+  backface-visibility: hidden; /* Hide the backface of the flipped element */
+  transition: transform 0.6s; /* Add a transition for smooth flipping */
 }
+
 .inside {
   background: linear-gradient(to right, #e7e7e7, #ffffff 30%);
   line-height: 3;
@@ -44,120 +51,149 @@ body {
   align-items: center;
   left: 50%;
 }
+
 .inside a {
   text-decoration: none;
   color: #000046;
-  font-size: 24px;
+  font-size: 4vw; /* Use viewport width units for responsive font size */
   font-weight: bold;
 }
+
 .inside a:hover {
   text-decoration: underline;
 }
+
 .outside {
-  -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
   z-index: 1;
   transform-origin: left;
   transition: 2s;
   cursor: pointer;
 }
+
 .front,
 .back {
   height: 100%;
   width: 100%;
   position: absolute;
-  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   transform: rotateX(0deg);
 }
+
 .front {
   background-color: #ffffff;
 }
+
 .back {
   transform: rotateY(180deg);
   background: linear-gradient(to left, #e7e7e7, #ffffff 30%);
 }
+
 .cake {
   width: 100%;
   position: absolute;
-  bottom: 30px;
+  bottom: 5%; /* Use a percentage value for better responsiveness */
 }
+
 .top-layer,
 .middle-layer,
 .bottom-layer {
-  height: 80px;
-  width: 240px;
+  height: 20vw; /* Use viewport width units for responsive height */
+  width: 60vw; /* Use viewport width units for responsive width */
   background-repeat: repeat;
-  background-size: 60px 100px;
-  background-position: 28px 0;
-  background-image: linear-gradient(
-      transparent 50px,
-      #fedbab 50px,
-      #fedbab 60px,
-      transparent 60px
-    ),
-    radial-gradient(circle at 30px 5px, #994c10 30px, #fcbf29 31px);
-  border-radius: 10px 10px 0 0;
+  background-size: 15vw 25vw; /* Use viewport width units for responsive background size */
+  background-position: 7vw 0; /* Use viewport width units for responsive background position */
+  background-image: linear-gradient(transparent 12.5vw, #fedbab 12.5vw, #fedbab 15vw, transparent 15vw),
+    radial-gradient(circle at 7.5vw 1.25vw, #994c10 7.5vw, #fcbf29 7.75vw);
+  border-radius: 2.5vw 2.5vw 0 0; /* Use viewport width units for responsive border radius */
   position: relative;
   margin: auto;
 }
+
 .middle-layer {
   transform: scale(0.85);
-  top: 6px;
+  top: 1.5vw; /* Use viewport width units for responsive top position */
 }
+
 .top-layer {
   transform: scale(0.7);
-  top: 26px;
+  top: 6.5vw; /* Use viewport width units for responsive top position */
 }
+
 .candle {
-  height: 45px;
-  width: 15px;
+  height: 11.25vw; /* Use viewport width units for responsive height */
+  width: 3.75vw; /* Use viewport width units for responsive width */
   background: repeating-linear-gradient(
     45deg,
     #fd3018 0,
-    #fd3018 5px,
-    #ffa89e 5px,
-    #ffa89e 10px
+    #fd3018 1.25vw,
+    #ffa89e 1.25vw,
+    #ffa89e 2.5vw
   );
   position: absolute;
   margin: auto;
   left: 0;
   right: 0;
-  bottom: 202px;
+  bottom: 50.5vw; /* Use viewport width units for responsive bottom position */
 }
+
 .candle:before {
   content: "";
   position: absolute;
-  height: 16px;
-  width: 16px;
+  height: 4vw; /* Use viewport width units for responsive height */
+  width: 4vw; /* Use viewport width units for responsive width */
   background-color: #ffa500;
   border-radius: 0 50% 50% 50%;
-  bottom: 48px;
+  bottom: 12vw; /* Use viewport width units for responsive bottom position */
   transform: rotate(45deg);
-  left: -1px;
+  left: -0.25vw; /* Use viewport width units for responsive left position */
 }
+
 .outside p {
-  font-size: 23px;
+  font-size: 5vw; /* Use viewport width units for responsive font size */
   text-transform: uppercase;
-  margin-top: 30px;
+  margin-top: 7.5vw; /* Use viewport width units for responsive margin */
   text-align: center;
-  letter-spacing: 6px;
+  letter-spacing: 1.5vw; /* Use viewport width units for responsive letter spacing */
   color: #000046;
 }
+
 .inside h3 {
-  font-size: 48px;
+  font-size: 12vw; /* Use viewport width units for responsive font size */
 }
+
 #button_back {
-  font-size: 22px;
+  font-size: 5vw; /* Use viewport width units for responsive font size */
   position: fixed;
   margin: 0 auto;
-  bottom: 50%;
+  bottom: 5vh; /* Use viewport height units for responsive bottom position */
   left: 0;
   right: 0;
-  width: 12em;
+  width: 30vw; /* Use viewport width units for responsive width */
   background-color: #ffffff;
   color: black;
   cursor: pointer;
   outline: none;
   border: none;
+}
+
+/* Media queries for smaller screens */
+@media (max-width: 480px) {
+  .inside a {
+    font-size: 5vw; /* Increase font size for smaller screens */
+  }
+
+  .outside p {
+    font-size: 6vw; /* Increase font size for smaller screens */
+    letter-spacing: 1vw; /* Decrease letter spacing for smaller screens */
+  }
+
+  .inside h3 {
+    font-size: 14vw; /* Increase font size for smaller screens */
+  }
+
+  #button_back {
+    font-size: 6vw; /* Increase font size for smaller screens */
+    width: 40vw; /* Increase width for smaller screens */
+  }
 }
