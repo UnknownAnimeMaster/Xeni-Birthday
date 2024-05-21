@@ -44,6 +44,10 @@ body {
   align-items: center;
   left: 50%;
 }
+.inside img {
+  max-width: 100%;
+  height: auto;
+}
 .outside {
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
@@ -139,7 +143,6 @@ body {
   font-size: 120px;
   line-height: 120px;
 }
-
 #button_back {
   font-size: 22px;
   position: fixed;
