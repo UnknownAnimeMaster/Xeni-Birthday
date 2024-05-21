@@ -1,33 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <title>Mu Hae's Birthday</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="main.js"></script>
-    <link rel="icon" href="Mu.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Birthday Card Mu</title>
+  <!-- Google Font-->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="card.css" />
 </head>
-
 <body>
-    <h1>Blow the candle Mu hae!</h1>
-    <button onclick="location.href='card.html'" id="button_go">Press Once You ready</button>
-     <div class="glow" id="glow"></div>
-     <div id="candle">
-       <div class="stripe"></div>
-       <div class="stripe"></div>
-       <div class="stripe"></div>
-       <div class="stripe"></div>
-       <div class="stripe"></div>
-       <div id="top">
-         <div class="smoke"></div>
-         <div class="smoke"></div>
-         <div class="smoke"></div>
-         <div id="knot"></div>
-         <div class="burn" id="flame"></div>
+  <div class="card">
+    <div class="outside">
+      <div class="front">
+        <p>Happy Birthday Mu</p>
+        <div class="cake">
+          <div class="top-layer"></div>
+          <div class="middle-layer"></div>
+          <div class="bottom-layer"></div>
+          <div class="candle"></div>
         </div>
+      </div>
+      <div class="back">
+        <button onclick="location.href='index.html'" id="button_back">Go back</button>
+      </div>
     </div>
-    <audio id="birthday-audio" src="birthday-audio.mp3"></audio>
+    <div class="inside">
+      <p>Another Qr Code?</p>
+      <img src="qr.png" width="100%" alt="QR Code">
+      <h1>😱</h1>
+    </div>
+  </div>
 </body>
 </html>
