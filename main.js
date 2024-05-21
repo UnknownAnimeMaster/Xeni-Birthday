@@ -3,6 +3,7 @@ $(document).ready(function() {
         var flame = $("#flame");
         var txt = $("h1");
         var audio = document.getElementById("birthday-audio");
+        var isAudioPlayed = false; // Track if audio has been played
 
         // Make it hidden on first time
         hideButton();
@@ -17,19 +18,19 @@ $(document).ready(function() {
             console.error("Error loading audio file.");
         };
 
+        // Add a button or touch event to trigger audio playback
+        $("#playAudioButton").on("click", function() {
+            playAudio();
+        });
+
         flame.on({
             click: function () {
                 // Debug: Log click event
                 console.log("Candle clicked");
 
                 // Ensure the audio is ready to be played
-                if (audio.readyState >= 2) {
-                    console.log("Playing audio");
-                    audio.play().catch(function(error) {
-                        console.error("Error playing audio:", error);
-                    });
-                } else {
-                    console.error("Audio is not ready to play");
+                if (audio.readyState >= 2 && !isAudioPlayed) {
+                    playAudio();
                 }
 
                 flame.removeClass("burn").addClass("puff");
@@ -40,7 +41,7 @@ $(document).ready(function() {
 
                 // Show the button after 5 seconds
                 showButton();
-                
+
                 txt.hide().html("I wish you a happy birthday").delay(750).fadeIn(300);
                 $("#candle").animate(
                     {
@@ -52,6 +53,19 @@ $(document).ready(function() {
         });
     });
 });
+
+function playAudio() {
+    audio.play()
+        .then(() => {
+            console.log("Playing audio");
+            isAudioPlayed = true;
+        })
+        .catch((error) => {
+            console.error("Error playing audio:", error);
+            // Fallback mechanism: Display a message or button to allow manual audio playback
+            $("#audioFallback").show();
+        });
+}
 
 // Show the button with opacity 0 to 100%
 function showButton() {
