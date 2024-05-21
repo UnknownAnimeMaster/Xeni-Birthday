@@ -45,7 +45,7 @@ body {
   left: 50%;
 }
 .inside a img {
-  width: 50%; /* Adjust this value to make the QR code smaller or larger */
+  width: 40%; /* Adjust this value to make the QR code smaller or larger */
   height: auto;
 }
 .outside {
