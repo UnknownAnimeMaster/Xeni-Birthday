@@ -1,34 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Birthday Card Mu</title>
-    <!-- Google Font-->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
-    <!-- Stylesheet -->
-    <link rel="stylesheet" href="card.css" />
-  </head>
-  <body>
-    <div class="card">
-      <div class="outside">
-        <div class="front">
-          <p>Happy Birthday Mu</p>
-          <div class="cake">
-            <div class="top-layer"></div>
-            <div class="middle-layer"></div>
-            <div class="bottom-layer"></div>
-            <div class="candle"></div>
-          </div>
-        </div>
-        <div class="back">
-          <button onclick="location.href='index.html'" id="button_back">Go back</button>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Birthday Card Mu</title>
+  <!-- Google Font-->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="card.css" />
+</head>
+<body>
+  <div class="card">
+    <div class="outside">
+      <div class="front">
+        <p>Happy Birthday Mu</p>
+        <div class="cake">
+          <div class="top-layer"></div>
+          <div class="middle-layer"></div>
+          <div class="bottom-layer"></div>
+          <div class="candle"></div>
         </div>
       </div>
-      <div class="inside">
-        <p>Another Qr Code?</p>
-        <img src="qr.png" width="100%" alt="QR Code">
-        <h1>😱</h1>
+      <div class="back">
+        <button onclick="location.href='index.html'" id="button_back">Go back</button>
       </div>
     </div>
-  </body>
+    <div class="inside">
+      <p>Another Qr Code?</p>
+      <a href="http://example.com" target="_blank">
+        <img src="qr.png" alt="QR Code">
+      </a>
+      <h1>😱</h1>
+    </div>
+  </div>
+</body>
 </html>
