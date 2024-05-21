@@ -44,9 +44,14 @@ body {
   align-items: center;
   left: 50%;
 }
-.inside a img {
-  width: 40%; /* Adjust this value to make the QR code smaller or larger */
-  height: auto;
+.inside a {
+  text-decoration: none;
+  color: #000046;
+  font-size: 24px;
+  font-weight: bold;
+}
+.inside a:hover {
+  text-decoration: underline;
 }
 .outside {
   -webkit-transform-style: preserve-3d;
@@ -139,9 +144,8 @@ body {
   letter-spacing: 6px;
   color: #000046;
 }
-.inside h1 {
-  font-size: 120px;
-  line-height: 120px;
+.inside h3 {
+  font-size: 48px;
 }
 #button_back {
   font-size: 22px;
