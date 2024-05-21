@@ -161,3 +161,58 @@ body {
   outline: none;
   border: none;
 }
+
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+  /* Styles for screens up to 768px wide */
+  .card {
+    width: 90vw;
+    height: 56.25vw; /* Maintain the 16:9 aspect ratio */
+    position: relative;
+    margin: auto;
+  }
+
+  .inside a {
+    font-size: 4vw;
+  }
+
+  .outside p {
+    font-size: 5vw;
+  }
+
+  .inside h3 {
+    font-size: 10vw;
+  }
+
+  #button_back {
+    font-size: 4vw;
+    width: 30vw;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Styles for screens up to 480px wide */
+  .card {
+    width: 90vw;
+    height: 56.25vw; /* Maintain the 16:9 aspect ratio */
+    position: relative;
+    margin: auto;
+  }
+
+  .inside a {
+    font-size: 5vw;
+  }
+
+  .outside p {
+    font-size: 6vw;
+  }
+
+  .inside h3 {
+    font-size: 12vw;
+  }
+
+  #button_back {
+    font-size: 5vw;
+    width: 40vw;
+  }
+}
